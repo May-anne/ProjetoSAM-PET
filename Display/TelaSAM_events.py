@@ -14,3 +14,7 @@ def valor_velocidade(event_struct):
 def valor_angulo(event_struct):
     return
 
+
+def put_data(event_struct):
+    return
+

@@ -1,0 +1,16 @@
+{
+  "codename": "Fonte_20",
+  "ttf_path": "\\assets\\coolvetica rg.otf",
+  "bin_path": "\\assets\\ui_font_Fonte_20.bin",
+  "c_path": "\\assets\\ui_font_Fonte_20.c",
+  "cfg_path": "\\assets\\ui_font_Fonte_20.fcfg",
+  "size": 20,
+  "bpp": 8,
+  "letters": 3,
+  "ranges": [
+    "0x20-0xff"
+  ],
+  "symbols": "",
+  "customparams": "--no-compress --no-prefilter",
+  "uploaded": false
+}

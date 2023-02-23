@@ -57,6 +57,17 @@ extern lv_obj_t * ui_Label2;
 void ui_event_Button5(lv_event_t * e);
 extern lv_obj_t * ui_Button5;
 extern lv_obj_t * ui_Label1;
+extern lv_obj_t * ui_TituloAudio1;
+void ui_event_ImageSong1(lv_event_t * e);
+extern lv_obj_t * ui_ImageSong1;
+extern lv_obj_t * ui_Image7;
+extern lv_obj_t * ui_Bar2;
+extern lv_obj_t * ui_Label4;
+extern lv_obj_t * ui_Label5;
+void ui_event_ImageSong2(lv_event_t * e);
+extern lv_obj_t * ui_ImageSong2;
+extern lv_obj_t * ui_Image8;
+extern lv_obj_t * ui_Bar1;
 
 void valor_velocidade(lv_event_t * e);
 void valor_angulo(lv_event_t * e);
@@ -64,10 +75,15 @@ void valor_angulo(lv_event_t * e);
 LV_IMG_DECLARE(ui_img_logoteste2_png);    // assets\logoteste2.png
 LV_IMG_DECLARE(ui_img_2011542280);    // assets\facepe-teste.png
 LV_IMG_DECLARE(ui_img_settings_png);    // assets\settings.png
-LV_IMG_DECLARE(ui_img_hands_png);    // assets\hands.png
+LV_IMG_DECLARE(ui_img_logotipo_png);    // assets\logotipo.png
 LV_IMG_DECLARE(ui_img_282859964);    // assets\playlist (1).png
+LV_IMG_DECLARE(ui_img_1280743751);    // assets\play-button.png
 
 
+LV_FONT_DECLARE(ui_font_Fonte_14);
+LV_FONT_DECLARE(ui_font_Fonte_18);
+LV_FONT_DECLARE(ui_font_Fonte_20);
+LV_FONT_DECLARE(ui_font_Fonte_22);
 
 
 void ui_init(void);
