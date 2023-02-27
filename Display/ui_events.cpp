@@ -19,3 +19,8 @@ void put_data(lv_event_t * e)
 {
 	// Your code here
 }
+
+void Tocar_Audio1(lv_event_t * e)
+{
+	// Your code here
+}

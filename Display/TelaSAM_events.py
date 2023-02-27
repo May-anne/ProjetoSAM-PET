@@ -18,3 +18,11 @@ def valor_angulo(event_struct):
 def put_data(event_struct):
     return
 
+
+def Tocar_Som1(event_struct):
+    return
+
+
+def Tocar_Audio1(event_struct):
+    return
+

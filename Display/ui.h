@@ -35,7 +35,6 @@ extern lv_obj_t * ui_Imagem_Button2;
 extern lv_obj_t * ui_Image4;
 extern lv_obj_t * ui_Tela_Configurar;
 extern lv_obj_t * ui_Background2;
-extern lv_obj_t * ui_Top2;
 extern lv_obj_t * ui_Titulo2;
 void ui_event_Button3(lv_event_t * e);
 extern lv_obj_t * ui_Button3;
@@ -46,13 +45,13 @@ extern lv_obj_t * ui_Slider1;
 extern lv_obj_t * ui_TituloAngulacao;
 void ui_event_Slider3(lv_event_t * e);
 extern lv_obj_t * ui_Slider3;
-extern lv_obj_t * ui_TextoValorMinVel;
-extern lv_obj_t * ui_TextoValorMinAng;
 extern lv_obj_t * ui_TextoValorMaxVel;
 extern lv_obj_t * ui_TextoValorMaxAng;
+extern lv_obj_t * ui_Dropdown2;
+extern lv_obj_t * ui_Label6;
+extern lv_obj_t * ui_Panel2;
 extern lv_obj_t * ui_Tela_Arquivos;
 extern lv_obj_t * ui_Background3;
-extern lv_obj_t * ui_Top3;
 extern lv_obj_t * ui_Label2;
 void ui_event_Button5(lv_event_t * e);
 extern lv_obj_t * ui_Button5;
@@ -68,16 +67,24 @@ void ui_event_ImageSong2(lv_event_t * e);
 extern lv_obj_t * ui_ImageSong2;
 extern lv_obj_t * ui_Image8;
 extern lv_obj_t * ui_Bar1;
+void ui_event_ImageSong1Pause(lv_event_t * e);
+extern lv_obj_t * ui_ImageSong1Pause;
+extern lv_obj_t * ui_Image9;
+void ui_event_ImageSong2Pause(lv_event_t * e);
+extern lv_obj_t * ui_ImageSong2Pause;
+extern lv_obj_t * ui_Image2;
 
 void valor_velocidade(lv_event_t * e);
 void valor_angulo(lv_event_t * e);
+void Tocar_Audio1(lv_event_t * e);
 
 LV_IMG_DECLARE(ui_img_logoteste2_png);    // assets\logoteste2.png
 LV_IMG_DECLARE(ui_img_2011542280);    // assets\facepe-teste.png
 LV_IMG_DECLARE(ui_img_settings_png);    // assets\settings.png
 LV_IMG_DECLARE(ui_img_logotipo_png);    // assets\logotipo.png
 LV_IMG_DECLARE(ui_img_282859964);    // assets\playlist (1).png
-LV_IMG_DECLARE(ui_img_1280743751);    // assets\play-button.png
+LV_IMG_DECLARE(ui_img_play_png);    // assets\play.png
+LV_IMG_DECLARE(ui_img_pause_png);    // assets\pause.png
 
 
 LV_FONT_DECLARE(ui_font_Fonte_14);
