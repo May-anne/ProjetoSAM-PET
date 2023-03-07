@@ -204,16 +204,6 @@ void loop() {
   lv_timer_handler();
   delay(5);
 
-  // Create test data
-
-  // Generate a random integer
-  //velocidade = ValueVel;
-
-  // Use integer to make a new float
-  //angulo = ValueAng;
-
-  // Format structured data
-  //strcpy(myData.a, "Welcome to the Workshop!");
   myData.a = ValueVel;
   myData.b = ValueAng;
   

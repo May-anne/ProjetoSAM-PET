@@ -7,6 +7,7 @@
 
 int ValueVel;
 int ValueAng;
+int ValueRepeat;
 
 void valor_velocidade(lv_event_t * e)
 {
@@ -25,4 +26,16 @@ void valor_angulo(lv_event_t * e)
 void put_data(lv_event_t * e)
 {
 	// Your code here
+}
+
+void Tocar_Audio1(lv_event_t * e)
+{
+	// Your code here
+}
+
+void valor_repetir(lv_event_t * e)
+{
+	lv_obj_t * slider = lv_event_get_target(e);
+  int32_t r = lv_slider_get_value(slider);
+  ValueRepeat = r;
 }
