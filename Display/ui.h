@@ -10,7 +10,7 @@
 extern "C" {
 #endif
 
-#include "lvgl/lvgl.h"
+#include "lvgl.h"
 
 extern lv_obj_t * ui_Tela_Inicial;
 extern lv_obj_t * ui_Background1;
@@ -47,9 +47,11 @@ void ui_event_Slider3(lv_event_t * e);
 extern lv_obj_t * ui_Slider3;
 extern lv_obj_t * ui_TextoValorMaxVel;
 extern lv_obj_t * ui_TextoValorMaxAng;
-extern lv_obj_t * ui_Dropdown2;
 extern lv_obj_t * ui_Label6;
 extern lv_obj_t * ui_Panel2;
+void ui_event_Slider4(lv_event_t * e);
+extern lv_obj_t * ui_Slider4;
+extern lv_obj_t * ui_Label7;
 extern lv_obj_t * ui_Tela_Arquivos;
 extern lv_obj_t * ui_Background3;
 extern lv_obj_t * ui_Label2;
@@ -73,9 +75,13 @@ extern lv_obj_t * ui_Image9;
 void ui_event_ImageSong2Pause(lv_event_t * e);
 extern lv_obj_t * ui_ImageSong2Pause;
 extern lv_obj_t * ui_Image2;
+extern int ValueAng;
+extern int ValueVel;
+extern in ValueRepeat;
 
 void valor_velocidade(lv_event_t * e);
 void valor_angulo(lv_event_t * e);
+void valor_repetir(lv_event_t * e);
 void Tocar_Audio1(lv_event_t * e);
 
 LV_IMG_DECLARE(ui_img_logoteste2_png);    // assets\logoteste2.png

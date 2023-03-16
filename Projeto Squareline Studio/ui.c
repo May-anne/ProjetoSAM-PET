@@ -42,11 +42,9 @@ void ui_event_Slider3(lv_event_t * e);
 lv_obj_t * ui_Slider3;
 lv_obj_t * ui_TextoValorMaxVel;
 lv_obj_t * ui_TextoValorMaxAng;
+lv_obj_t * ui_Dropdown2;
 lv_obj_t * ui_Label6;
 lv_obj_t * ui_Panel2;
-void ui_event_Slider4(lv_event_t * e);
-lv_obj_t * ui_Slider4;
-lv_obj_t * ui_Label7;
 lv_obj_t * ui_Tela_Arquivos;
 lv_obj_t * ui_Background3;
 lv_obj_t * ui_Label2;
@@ -126,15 +124,6 @@ void ui_event_Slider3(lv_event_t * e)
     }
     if(event_code == LV_EVENT_VALUE_CHANGED) {
         valor_angulo(e);
-    }
-}
-void ui_event_Slider4(lv_event_t * e)
-{
-    lv_event_code_t event_code = lv_event_get_code(e);
-    lv_obj_t * target = lv_event_get_target(e);
-    if(event_code == LV_EVENT_VALUE_CHANGED) {
-        _ui_slider_set_text_value(ui_Label7, target, "", "");
-        valor_repetir(e);
     }
 }
 void ui_event_Button5(lv_event_t * e)
@@ -512,13 +501,25 @@ void ui_Tela_Configurar_screen_init(void)
     lv_obj_set_style_text_opa(ui_TextoValorMaxAng, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_font(ui_TextoValorMaxAng, &lv_font_montserrat_20, LV_PART_MAIN | LV_STATE_DEFAULT);
 
+    ui_Dropdown2 = lv_dropdown_create(ui_Tela_Configurar);
+    lv_obj_set_width(ui_Dropdown2, 183);
+    lv_obj_set_height(ui_Dropdown2, LV_SIZE_CONTENT);    /// 1
+    lv_obj_set_x(ui_Dropdown2, 0);
+    lv_obj_set_y(ui_Dropdown2, 103);
+    lv_obj_set_align(ui_Dropdown2, LV_ALIGN_CENTER);
+    lv_obj_add_flag(ui_Dropdown2, LV_OBJ_FLAG_SCROLL_ON_FOCUS);     /// Flags
+    lv_obj_set_style_bg_color(ui_Dropdown2, lv_color_hex(0x606D80), LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui_Dropdown2, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui_Dropdown2, lv_color_hex(0x606D80), LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui_Dropdown2, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
+
     ui_Label6 = lv_label_create(ui_Tela_Configurar);
     lv_obj_set_width(ui_Label6, LV_SIZE_CONTENT);   /// 1
     lv_obj_set_height(ui_Label6, LV_SIZE_CONTENT);    /// 1
     lv_obj_set_x(ui_Label6, 0);
-    lv_obj_set_y(ui_Label6, 66);
+    lv_obj_set_y(ui_Label6, 59);
     lv_obj_set_align(ui_Label6, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_Label6, "Repetições");
+    lv_label_set_text(ui_Label6, "Tipo do exercício");
     lv_obj_set_style_text_color(ui_Label6, lv_color_hex(0x606D80), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui_Label6, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_font(ui_Label6, &ui_font_Fonte_20, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -535,39 +536,9 @@ void ui_Tela_Configurar_screen_init(void)
     lv_obj_set_style_border_color(ui_Panel2, lv_color_hex(0x2B4C7E), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_border_opa(ui_Panel2, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
 
-    ui_Slider4 = lv_slider_create(ui_Tela_Configurar);
-    lv_slider_set_range(ui_Slider4, 0, 10);
-    lv_obj_set_width(ui_Slider4, 161);
-    lv_obj_set_height(ui_Slider4, 12);
-    lv_obj_set_x(ui_Slider4, 0);
-    lv_obj_set_y(ui_Slider4, 105);
-    lv_obj_set_align(ui_Slider4, LV_ALIGN_CENTER);
-    lv_obj_set_style_bg_color(ui_Slider4, lv_color_hex(0x567EBB), LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_opa(ui_Slider4, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
-
-    lv_obj_set_style_bg_color(ui_Slider4, lv_color_hex(0x567EBB), LV_PART_INDICATOR | LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_opa(ui_Slider4, 255, LV_PART_INDICATOR | LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_grad_color(ui_Slider4, lv_color_hex(0xBEC3CB), LV_PART_INDICATOR | LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_grad_dir(ui_Slider4, LV_GRAD_DIR_HOR, LV_PART_INDICATOR | LV_STATE_DEFAULT);
-
-    lv_obj_set_style_bg_color(ui_Slider4, lv_color_hex(0x2B4C7E), LV_PART_KNOB | LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_opa(ui_Slider4, 255, LV_PART_KNOB | LV_STATE_DEFAULT);
-
-    ui_Label7 = lv_label_create(ui_Tela_Configurar);
-    lv_obj_set_width(ui_Label7, LV_SIZE_CONTENT);   /// 1
-    lv_obj_set_height(ui_Label7, LV_SIZE_CONTENT);    /// 1
-    lv_obj_set_x(ui_Label7, 111);
-    lv_obj_set_y(ui_Label7, 105);
-    lv_obj_set_align(ui_Label7, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_Label7, "0");
-    lv_obj_set_style_text_color(ui_Label7, lv_color_hex(0x606D80), LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_text_opa(ui_Label7, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui_Label7, &lv_font_montserrat_20, LV_PART_MAIN | LV_STATE_DEFAULT);
-
     lv_obj_add_event_cb(ui_Button3, ui_event_Button3, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_Slider1, ui_event_Slider1, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_Slider3, ui_event_Slider3, LV_EVENT_ALL, NULL);
-    lv_obj_add_event_cb(ui_Slider4, ui_event_Slider4, LV_EVENT_ALL, NULL);
 
 }
 void ui_Tela_Arquivos_screen_init(void)
